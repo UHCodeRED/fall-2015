@@ -1,5 +1,33 @@
 body {
 	opacity: 1 !important;
     padding-top: 50px;
-    padding-bottom: 20px;
+    background: #fff;
+    background: #C8102E;
+}
+
+.home {
+	background: #C8102E;
+	height: calc(100% - 50px);
+	height: calc(100vh - 50px);
+}
+
+.about {
+
+}
+
+.focus {
+	
+}
+
+.faq {
+
+}
+
+.sponsors {
+
+}
+
+.footer {
+	background: #C8102E;
+	padding: 50px 0;
 }
