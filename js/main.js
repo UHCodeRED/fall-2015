@@ -32,7 +32,7 @@ var particleCount = 75,
 // Function to make canvas black
 function paintCanvas() {
     // Set color to black
-    ctx.fillStyle = "rgba(255,26,66,1)";
+    ctx.fillStyle = "rgba(30,30,30,1)";
 
     // Rectangle of white from Top Left (0,0) to Bottom Right (W,H)
     ctx.fillRect(0, 0, W, H);
