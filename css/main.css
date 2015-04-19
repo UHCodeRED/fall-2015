@@ -1,33 +1,329 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
-	opacity: 1 !important;
-    padding-top: 50px;
+    opacity: 1 !important;
     background: #fff;
     background: #C8102E;
 }
 
-.home {
-	background: #C8102E;
-	height: calc(100% - 50px);
-	height: calc(100vh - 50px);
+.navbar-inverse {
+    background: #222;
+    height: 60px;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
 }
+
+.navbar-collapse.collapse {
+    text-align: center;
+    /* Set this */
+    
+    display: block !important;
+    height: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important;
+}
+
+.navbar-nav {
+    display: inline-block;
+    float: none;
+    margin: 0;
+}
+
+.navbar-nav li > a {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #fff !important;
+    line-height: 30px;
+}
+
+section .headerBlock {
+    text-align: center;
+    padding: 50px;
+    text-transform: uppercase;
+    font-size: 42px;
+    font-weight: 300;
+}
+
+/* Home */
+
+.home {
+    background: #C8102E;
+    height: calc(100% - 60px);
+    height: calc(100vh - 60px);
+    display: block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.home #logo {
+    position: absolute;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    top: 25%;
+    left: 0;
+    /*bottom: 0;*/
+    right: 0;
+}
+
+.rocket {
+    position: absolute;
+    top: 100px;
+    -webkit-transform: translate3d( 18em, -2em, 0) rotate(55deg);
+    transform: translate3d( 18em, -2em, 0) rotate(55deg);
+}
+
+.fuselage {
+    display: block;
+    width: 12em;
+    height: 13em;
+    -webkit-transform-origin: center bottom;
+    transform-origin: center bottom;
+    -webkit-animation: rocket-ani .8s linear infinite;
+    animation: rocket-ani .8s linear infinite;
+}
+
+.contrail {
+    position: absolute;
+    top: 12.1em;
+    left: 1em;
+}
+
+.tail {
+    display: block;
+    width: 4em;
+    height: 11.5em;
+    background-color: #fff;
+    position: absolute;
+    left: 3em;
+    -webkit-border-radius: 0 0 2em 2em;
+    border-radius: 0 0 2em 2em;
+}
+
+.flame {
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 1em;
+    border-width: 4em 1em 0 1em;
+    border-style: solid;
+    border-color: #F6BE00 transparent;
+    -webkit-animation: flame-ani 1.5s ease-in-out infinite;
+    animation: flame-ani 1.5s ease-in-out infinite;
+}
+
+.cloud {
+    position: absolute;
+    top: 6em;
+    left: 0;
+}
+
+.smoke {
+    display: block;
+    width: 4em;
+    height: 4em;
+    position: absolute;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #eee;
+    -webkit-animation: smoke-ani 2s ease infinite;
+    animation: smoke-ani 2s ease infinite;
+}
+
+.smoke.-one {
+    left: .5em;
+    top: 1em;
+    -webkit-animation-delay: .2s;
+    animation-delay: .2s;
+}
+
+.smoke.-two {
+    left: 5em;
+    top: 0;
+    -webkit-animation-delay: .3s;
+    animation-delay: .3s;
+}
+
+.smoke.-three {
+    left: 6em;
+    top: 2em;
+    -webkit-animation-delay: .5s;
+    animation-delay: .5s;
+}
+
+.smoke.-four {
+    left: .5em;
+    top: 3em;
+    -webkit-animation-delay: .9s;
+    animation-delay: .9s;
+}
+
+.smoke.-five {
+    left: 2em;
+    top: 4em;
+    -webkit-animation-delay: .5s;
+    animation-delay: .5s;
+}
+
+.smoke.-six {
+    left: 4em;
+    top: 3em;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+.planet {
+    display: block;
+    width: 60em;
+    height: 60em;
+    position: absolute;
+    left: 50%;
+    bottom: -44em;
+    margin-left: -30em;
+    background-color: #fff;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-animation: planet-rotate-ani 14s linear infinite;
+    animation: planet-rotate-ani 14s linear infinite;
+}
+
+.planet::after {
+    content: "";
+    display: block;
+    width: 4em;
+    height: 4em;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -2em;
+    margin-top: -2em;
+    border-radius: 50%;
+    box-shadow: 10em 20em 0 0 #ddd, 20em 10em 0 2em #ddd, 21em -1em 0 1em #ddd, 18em -6em 0 0 #ddd, 17em -15em 0 2em #ddd, 8em -22em 0 0 #ddd, -1em -24em 0 1em #ddd, -10em -21em 0 0 #ddd, -18em -12em 0 2em #ddd, -23em 7em 0 1em #ddd, -16em 18em 0 0 #ddd, -24em 0 0 0 #ddd, -4em 20em 0 2em #ddd;
+}
+
+/* About */
 
 .about {
-
+    background: #eee;
 }
 
-.focus {
-	
+.about .headerBlock {
+	color: #C8102E !important;
 }
 
-.faq {
+/* Focus/Mission */
 
-}
+.focus {}
 
-.sponsors {
+/* FAQ */
 
-}
+.faq {}
+
+/* Sponsors */
+
+.sponsors {}
+
+/* Footer */
 
 .footer {
-	background: #C8102E;
-	padding: 50px 0;
+    background: #C8102E;
+    padding: 50px 0;
+}
+
+/* Animations */
+
+@-webkit-keyframes rocket-ani {
+    0%, 100% {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+    }
+    50% {
+        -webkit-transform: scale(.95, 1.05);
+        transform: scale(.95, 1.05);
+    }
+}
+
+@keyframes rocket-ani {
+    0%, 100% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(.95, 1.05);
+    }
+}
+
+@-webkit-keyframes smoke-ani {
+    0%, 100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    50% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+}
+
+@keyframes smoke-ani {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0);
+    }
+}
+
+@-webkit-keyframes flame-ani {
+    0%, 25%, 60%, 100% {
+        border-width: 4em 1em 0 1em;
+    }
+    10%,
+    90% {
+        border-width: 2em 1em 0 1em;
+    }
+    40% {
+        border-width: 3em 1em 0 1em;
+    }
+}
+
+@keyframes flame-ani {
+    0%, 25%, 60%, 100% {
+        border-width: 4em 1em 0 1em;
+    }
+    10%,
+    90% {
+        border-width: 2em 1em 0 1em;
+    }
+    40% {
+        border-width: 3em 1em 0 1em;
+    }
+}
+
+@-webkit-keyframes planet-rotate-ani {
+    0% {
+        -webkit-transform: rotate( 0deg);
+        transform: rotate( 0deg);
+    }
+    100% {
+        -webkit-transform: rotate( -360deg);
+        transform: rotate( -360deg);
+    }
+}
+
+@keyframes planet-rotate-ani {
+    0% {
+        transform: rotate( 0deg);
+    }
+    100% {
+        transform: rotate( -360deg);
+    }
 }
