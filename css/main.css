@@ -135,9 +135,19 @@ section .headerBlock {
     position: absolute;
     -webkit-border-radius: 50%;
     border-radius: 50%;
-    background-color: #eee;
+    background-color: #ddd;
     -webkit-animation: smoke-ani 2s ease infinite;
     animation: smoke-ani 2s ease infinite;
+}
+
+.smoke {
+    display: block;
+    width: 4em;
+    height: 4em;
+    position: absolute;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #dadada;
 }
 
 .smoke.-one {
@@ -157,29 +167,81 @@ section .headerBlock {
 .smoke.-three {
     left: 6em;
     top: 2em;
-    -webkit-animation-delay: .5s;
-    animation-delay: .5s;
+    -webkit-animation-delay: .4s;
+    animation-delay: .4s;
 }
 
 .smoke.-four {
     left: .5em;
     top: 3em;
-    -webkit-animation-delay: .9s;
-    animation-delay: .9s;
+    -webkit-animation-delay: .5s;
+    animation-delay: .5s;
 }
 
 .smoke.-five {
     left: 2em;
     top: 4em;
-    -webkit-animation-delay: .5s;
-    animation-delay: .5s;
+    -webkit-animation-delay: .6s;
+    animation-delay: .6s;
 }
 
 .smoke.-six {
     left: 4em;
     top: 3em;
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
+}
+
+.smokelight {
+    display: block;
+    width: 4em;
+    height: 4em;
+    position: absolute;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background-color: #d1d1d1;
+    -webkit-animation: smoke-ani-reduce 2s ease infinite;
+    animation: smoke-ani-reduce 2s ease infinite;
+}
+
+.smokelight.-one {
+    left: 0em;
+    top: 2em;
+    -webkit-animation-delay: .1s;
+    animation-delay: .1s;
+}
+
+.smokelight.-two {
+    left: 4em;
+    top: 2em;
+    -webkit-animation-delay: .3s;
+    animation-delay: .3s;
+}
+
+.smokelight.-three {
+    left: 6em;
+    top: 1.5em;
+    -webkit-animation-delay: .5s;
+    animation-delay: .5s;
+}
+
+.smokelight.-four {
+    left: 0em;
+    top: 2.5em;
+    -webkit-animation-delay: .7s;
+    animation-delay: .7s;
+}
+
+.smokelight.-five {
+    left: 2em;
+    top: 4em;
+    -webkit-animation-delay: .9s;
+    animation-delay: .9s;
+}
+
+.smokelight.-six {
+    left: 4em;
+    top: 3.5em;
+    -webkit-animation-delay: .11s;
+    animation-delay: .11s;
 }
 
 .planet {
@@ -242,14 +304,14 @@ section .headerBlock {
 
 /* Animations */
 
-@-webkit-keyframes rocket-ani {
+/*@-webkit-keyframes rocket-ani {
     0%, 100% {
         -webkit-transform: scale(1, 1);
         transform: scale(1, 1);
     }
     50% {
-        -webkit-transform: scale(.95, 1.05);
-        transform: scale(.95, 1.05);
+        -webkit-transform: scale(.98, 1);
+        transform: scale(.98, 1);
     }
 }
 
@@ -258,9 +320,9 @@ section .headerBlock {
         transform: scale(1, 1);
     }
     50% {
-        transform: scale(.95, 1.05);
+        transform: scale(.98, 1.05);
     }
-}
+}*/
 
 @-webkit-keyframes smoke-ani {
     0%, 100% {
@@ -268,8 +330,8 @@ section .headerBlock {
         transform: scale(1);
     }
     50% {
-        -webkit-transform: scale(0);
-        transform: scale(0);
+        -webkit-transform: scale(1.25);
+        transform: scale(1.25);
     }
 }
 
@@ -278,17 +340,37 @@ section .headerBlock {
         transform: scale(1);
     }
     50% {
-        transform: scale(0);
+        transform: scale(1.25);
+    }
+}
+
+@-webkit-keyframes smoke-ani-reduce {
+    0%, 100% {
+        -webkit-transform: scale(1.25);
+        transform: scale(1.25);
+    }
+    50% {
+        -webkit-transform: scale(0.75);
+        transform: scale(0.75);
+    }
+}
+
+@keyframes smoke-ani-reduce {
+    0%, 100% {
+        transform: scale(1.25);
+    }
+    50% {
+        transform: scale(0.75);
     }
 }
 
 @-webkit-keyframes flame-ani {
     0%, 25%, 60%, 100% {
-        border-width: 4em 1em 0 1em;
+        border-width: 3em 1em 0 1em;
     }
     10%,
     90% {
-        border-width: 2em 1em 0 1em;
+        border-width: 2.5em 1em 0 1em;
     }
     40% {
         border-width: 3em 1em 0 1em;
@@ -297,11 +379,11 @@ section .headerBlock {
 
 @keyframes flame-ani {
     0%, 25%, 60%, 100% {
-        border-width: 4em 1em 0 1em;
+        border-width: 3em 1em 0 1em;
     }
     10%,
     90% {
-        border-width: 2em 1em 0 1em;
+        border-width: 2.5em 1em 0 1em;
     }
     40% {
         border-width: 3em 1em 0 1em;
