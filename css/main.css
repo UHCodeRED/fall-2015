@@ -1,6 +1,8 @@
 * {
     margin: 0;
     padding: 0;
+    /*font-family: 'Open Sans', sans-serif;*/
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -21,12 +23,25 @@ body {
 
 /* Components */
 
+section {
+	padding: 50px;
+}
+
+section:first-child {
+	padding: 0;
+}
+
 section .headerBlock {
     text-align: center;
-    padding: 50px;
     text-transform: uppercase;
     font-size: 42px;
     font-weight: 300;
+    padding-bottom: 50px;
+}
+
+.blockquote {
+	border-color: #C8102E;
+	font-style: italic;
 }
 
 /* Navigation */
@@ -149,91 +164,6 @@ section .headerBlock {
     animation: flame-ani 1.5s ease-in-out infinite;
 }
 
-/*.cloud {
-    position: absolute;
-    top: 6em;
-    left: 0;
-}
-
-.smoke {
-    display: block;
-    width: 4em;
-    height: 4em;
-    position: absolute;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    background-color: #ddd;
-    -webkit-animation: smoke-ani 2s ease infinite;
-    animation: smoke-ani 2s ease infinite;
-}
-
-.smoke {
-    display: block;
-    width: 4em;
-    height: 4em;
-    position: absolute;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    background-color: #dadada;
-}
-
-.smoke.-one {
-    left: .5em;
-    top: 1em;
-    -webkit-animation-delay: .2s;
-    animation-delay: .2s;
-}
-
-.smoke.-two {
-    left: 5em;
-    top: 0;
-    -webkit-animation-delay: .3s;
-    animation-delay: .3s;
-    background-color: #d3d3d3;
-}
-
-.smoke.-three {
-    left: 6em;
-    top: 2em;
-    -webkit-animation-delay: .4s;
-    animation-delay: .4s;
-}
-
-.smoke.-four {
-    left: .5em;
-    top: 3em;
-    -webkit-animation-delay: .5s;
-    animation-delay: .5s;
-    background-color: #d3d3d3;
-}
-
-.smoke.-five {
-    left: 2em;
-    top: 4em;
-    -webkit-animation-delay: .6s;
-    animation-delay: .6s;
-}
-
-.smoke.-six {
-    left: 4em;
-    top: 3em;
-    -webkit-animation-delay: .7s;
-    animation-delay: .7s;
-    background-color: #d3d3d3;
-}
-
-.smokelight {
-    display: block;
-    width: 4em;
-    height: 4em;
-    position: absolute;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    background-color: #d1d1d1;
-    -webkit-animation: smoke-ani-reduce 2s ease infinite;
-    animation: smoke-ani-reduce 2s ease infinite;
-}*/
-
 .planet {
     display: block;
     height: 100%;
@@ -248,23 +178,9 @@ section .headerBlock {
     /*background-color: #fff;*/
     -webkit-border-radius: 50%;
     border-radius: 50%;
-    -webkit-animation: planet-rotate-ani 14s linear infinite;
-    animation: planet-rotate-ani 14s linear infinite;
+    -webkit-animation: planet-rotate-ani 45s linear infinite;
+    animation: planet-rotate-ani 45s linear infinite;
 }
-
-/*.planet::after {
-    content: "";
-    display: block;
-    width: 4em;
-    height: 4em;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: -2em;
-    margin-top: -2em;
-    border-radius: 50%;
-    box-shadow: 10em 20em 0 0 #ddd, 20em 10em 0 2em #ddd, 21em -1em 0 1em #ddd, 18em -6em 0 0 #ddd, 17em -15em 0 2em #ddd, 8em -22em 0 0 #ddd, -1em -24em 0 1em #ddd, -10em -21em 0 0 #ddd, -18em -12em 0 2em #ddd, -23em 7em 0 1em #ddd, -16em 18em 0 0 #ddd, -24em 0 0 0 #ddd, -4em 20em 0 2em #ddd;
-}*/
 
 /* About */
 
@@ -276,24 +192,46 @@ section .headerBlock {
 	color: #C8102E !important;
 }
 
-/* mission/Mission */
+.about p {
+	font-size: 18px;
+}
 
-.mission {}
+/* Mission */
+
+.mission {
+	background: #C8102E;
+}
+
+.mission .headerBlock {
+	color: #fff !important;
+}
 
 /* FAQ */
 
-.faq {}
+.faq {
+
+}
+
+.faq .headerBlock {
+	color: #fff !important;
+}
 
 /* Sponsors */
 
-.sponsors {}
+.sponsors {
+	background: #fff;
+}
+
+.sponsors .headerBlock {
+	color: #C8102E !important;
+}
 
 /* Footer */
 
 .footer {
     background: #1e1e1e;
     color: #fff;
-    padding: 50px 0;
+    font-size: 24px;
 }
 
 /* Animations */
@@ -376,8 +314,8 @@ section .headerBlock {
         transform: rotate( 0deg);
     }
     100% {
-        -webkit-transform: rotate( -120deg);
-        transform: rotate( -120deg);
+        -webkit-transform: rotate( -360deg);
+        transform: rotate( -360deg);
     }
 }
 
@@ -386,6 +324,6 @@ section .headerBlock {
         transform: rotate( 0deg);
     }
     100% {
-        transform: rotate( -120deg);
+        transform: rotate( -360deg);
     }
 }
