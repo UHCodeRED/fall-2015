@@ -162,6 +162,7 @@ section .headerBlock {
     top: 0;
     -webkit-animation-delay: .3s;
     animation-delay: .3s;
+    background-color: #d3d3d3;
 }
 
 .smoke.-three {
@@ -176,6 +177,7 @@ section .headerBlock {
     top: 3em;
     -webkit-animation-delay: .5s;
     animation-delay: .5s;
+    background-color: #d3d3d3;
 }
 
 .smoke.-five {
@@ -188,6 +190,9 @@ section .headerBlock {
 .smoke.-six {
     left: 4em;
     top: 3em;
+    -webkit-animation-delay: .7s;
+    animation-delay: .7s;
+    background-color: #d3d3d3;
 }
 
 .smokelight {
@@ -200,48 +205,6 @@ section .headerBlock {
     background-color: #d1d1d1;
     -webkit-animation: smoke-ani-reduce 2s ease infinite;
     animation: smoke-ani-reduce 2s ease infinite;
-}
-
-.smokelight.-one {
-    left: 0em;
-    top: 2em;
-    -webkit-animation-delay: .1s;
-    animation-delay: .1s;
-}
-
-.smokelight.-two {
-    left: 4em;
-    top: 2em;
-    -webkit-animation-delay: .3s;
-    animation-delay: .3s;
-}
-
-.smokelight.-three {
-    left: 6em;
-    top: 1.5em;
-    -webkit-animation-delay: .5s;
-    animation-delay: .5s;
-}
-
-.smokelight.-four {
-    left: 0em;
-    top: 2.5em;
-    -webkit-animation-delay: .7s;
-    animation-delay: .7s;
-}
-
-.smokelight.-five {
-    left: 2em;
-    top: 4em;
-    -webkit-animation-delay: .9s;
-    animation-delay: .9s;
-}
-
-.smokelight.-six {
-    left: 4em;
-    top: 3.5em;
-    -webkit-animation-delay: .11s;
-    animation-delay: .11s;
 }
 
 .planet {
@@ -342,26 +305,6 @@ section .headerBlock {
     }
     50% {
         transform: scale(1.25);
-    }
-}
-
-@-webkit-keyframes smoke-ani-reduce {
-    0%, 100% {
-        -webkit-transform: scale(1.25);
-        transform: scale(1.25);
-    }
-    50% {
-        -webkit-transform: scale(0.75);
-        transform: scale(0.75);
-    }
-}
-
-@keyframes smoke-ani-reduce {
-    0%, 100% {
-        transform: scale(1.25);
-    }
-    50% {
-        transform: scale(0.75);
     }
 }
 
