@@ -8,6 +8,29 @@ body {
     background: #1e1e1e;
 }
 
+/* Helpers */
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Components */
+
+section .headerBlock {
+    text-align: center;
+    padding: 50px;
+    text-transform: uppercase;
+    font-size: 42px;
+    font-weight: 300;
+}
+
+/* Navigation */
+
 .navbar-inverse {
     background: #222;
     height: 60px;
@@ -42,14 +65,6 @@ body {
 
 .navbar-toggle {
 	margin-top: 14px;
-}
-
-section .headerBlock {
-    text-align: center;
-    padding: 50px;
-    text-transform: uppercase;
-    font-size: 42px;
-    font-weight: 300;
 }
 
 /* Home */
