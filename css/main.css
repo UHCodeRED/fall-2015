@@ -40,6 +40,10 @@ body {
     line-height: 30px;
 }
 
+.navbar-toggle {
+	margin-top: 14px;
+}
+
 section .headerBlock {
     text-align: center;
     padding: 50px;
@@ -62,8 +66,10 @@ section .headerBlock {
 }
 
 .home .container {
-	padding: 20px;
+	padding: 3rem;
 	text-align: center;
+	position: absolute;
+	width: 100%;
 }
 
 .home #logo {
@@ -76,7 +82,10 @@ section .headerBlock {
 
 .rocket {
     position: absolute;
-    top: 100px;
+    /*top: 100px;*/
+    /*margin-left: -100%;*/
+/*    left: -75%;
+    bottom: -100%;*/
     -webkit-transform: translate3d( 18em, -2em, 0) rotate(55deg);
     transform: translate3d( 18em, -2em, 0) rotate(55deg);
 }
@@ -99,13 +108,16 @@ section .headerBlock {
 
 .tail {
     display: block;
-    width: 4em;
-    height: 11.5em;
-    background-color: #fff;
+    width: 0;
+    height: 0;
     position: absolute;
     left: 3em;
-    -webkit-border-radius: 0 0 2em 2em;
-    border-radius: 0 0 2em 2em;
+    border-width: 4em 1em 0 1em;
+    border-style: solid;
+    border-color: #D89B00 transparent;
+    -webkit-animation: flame-ani-lg 3s ease-in-out infinite;
+    animation: flame-ani-lg 3s ease-in-out infinite;
+    z-index: -1;
 }
 
 .flame {
@@ -113,8 +125,8 @@ section .headerBlock {
     width: 0;
     height: 0;
     position: absolute;
-    top: 0;
-    left: 1em;
+    top: -6em;
+    left: -1em;
     border-width: 4em 1em 0 1em;
     border-style: solid;
     border-color: #F6BE00 transparent;
@@ -122,7 +134,7 @@ section .headerBlock {
     animation: flame-ani 1.5s ease-in-out infinite;
 }
 
-.cloud {
+/*.cloud {
     position: absolute;
     top: 6em;
     left: 0;
@@ -205,7 +217,7 @@ section .headerBlock {
     background-color: #d1d1d1;
     -webkit-animation: smoke-ani-reduce 2s ease infinite;
     animation: smoke-ani-reduce 2s ease infinite;
-}
+}*/
 
 .planet {
     display: block;
@@ -216,7 +228,7 @@ section .headerBlock {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -50%;
+    bottom: -60%;
     margin: auto;
     /*background-color: #fff;*/
     -webkit-border-radius: 50%;
@@ -271,14 +283,14 @@ section .headerBlock {
 
 /* Animations */
 
-/*@-webkit-keyframes rocket-ani {
+@-webkit-keyframes rocket-ani {
     0%, 100% {
         -webkit-transform: scale(1, 1);
         transform: scale(1, 1);
     }
     50% {
-        -webkit-transform: scale(.98, 1);
-        transform: scale(.98, 1);
+        -webkit-transform: scale(1, 1.025);
+        transform: scale(1, 1.05);
     }
 }
 
@@ -287,27 +299,33 @@ section .headerBlock {
         transform: scale(1, 1);
     }
     50% {
-        transform: scale(.98, 1.05);
-    }
-}*/
-
-@-webkit-keyframes smoke-ani {
-    0%, 100% {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-    }
-    50% {
-        -webkit-transform: scale(1.25);
-        transform: scale(1.25);
+        transform: scale(1, 1.025);
     }
 }
 
-@keyframes smoke-ani {
-    0%, 100% {
-        transform: scale(1);
+@-webkit-keyframes flame-ani-lg {
+    0%, 25%, 60%, 100% {
+        border-width: 6em 2em 0 2em;
     }
-    50% {
-        transform: scale(1.25);
+    10%,
+    90% {
+        border-width: 5em 2em 0 2em;
+    }
+    40% {
+        border-width: 6em 2em 0 2em;
+    }
+}
+
+@keyframes flame-ani-lg {
+    0%, 25%, 60%, 100% {
+        border-width: 6em 2em 0 2em;
+    }
+    10%,
+    90% {
+        border-width: 5em 2em 0 2em;
+    }
+    40% {
+        border-width: 6em 2em 0 2em;
     }
 }
 
@@ -343,8 +361,8 @@ section .headerBlock {
         transform: rotate( 0deg);
     }
     100% {
-        -webkit-transform: rotate( -360deg);
-        transform: rotate( -360deg);
+        -webkit-transform: rotate( -120deg);
+        transform: rotate( -120deg);
     }
 }
 
@@ -353,6 +371,6 @@ section .headerBlock {
         transform: rotate( 0deg);
     }
     100% {
-        transform: rotate( -360deg);
+        transform: rotate( -120deg);
     }
 }
