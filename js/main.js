@@ -24,7 +24,7 @@ canvas.width = W;
 canvas.height = H;
 
 // Some variables for later use
-var particleCount = 75,
+var particleCount = $(window).width()/30,
     particles = [],
     minDist = 65,
     dist;

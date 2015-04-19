@@ -61,15 +61,17 @@ section .headerBlock {
     overflow: hidden;
 }
 
+.home .container {
+	padding: 20px;
+	text-align: center;
+}
+
 .home #logo {
-    position: absolute;
+    /*position: absolute;*/
     width: 100%;
     max-width: 800px;
     margin: auto;
-    top: 25%;
-    left: 0;
-    /*bottom: 0;*/
-    right: 0;
+    margin-top: 10rem;
 }
 
 .rocket {
