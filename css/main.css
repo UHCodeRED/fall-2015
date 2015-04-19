@@ -6,7 +6,7 @@
 body {
     opacity: 1 !important;
     background: #fff;
-    background: #C8102E;
+    background: #1e1e1e;
 }
 
 .navbar-inverse {
@@ -298,7 +298,8 @@ section .headerBlock {
 /* Footer */
 
 .footer {
-    background: #C8102E;
+    background: #1e1e1e;
+    color: #fff;
     padding: 50px 0;
 }
 
