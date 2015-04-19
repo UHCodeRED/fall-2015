@@ -52,8 +52,8 @@ function Particle() {
     this.y = Math.random() * H;
 
     // Also need to set some velocity
-    this.vx = -2 + Math.random() * Math.random();
-    this.vy = 2 + Math.random() * Math.random();
+    this.vx = -0.5 + Math.random() * Math.random();
+    this.vy = 0.5 + Math.random() * Math.random();
 
     // Now the size of the particles
     this.radius = Math.random() * (Math.random() * 5);
