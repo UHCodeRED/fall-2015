@@ -206,6 +206,10 @@ section .headerBlock {
 	color: #fff !important;
 }
 
+.mission * {
+	color: #fff;
+}
+
 /* FAQ */
 
 .faq {
@@ -214,6 +218,19 @@ section .headerBlock {
 
 .faq .headerBlock {
 	color: #fff !important;
+}
+
+.faq h4 {
+	font-size: 24px;
+	color: #ddd !important;
+}
+
+.faq p{
+	font-size: 16px;
+}
+
+.faq * {
+	color: #999;
 }
 
 /* Sponsors */
