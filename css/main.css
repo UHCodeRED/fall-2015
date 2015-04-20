@@ -134,12 +134,14 @@ section .headerBlock {
 	text-align: center;
 	position: absolute;
 	width: 100%;
+	z-index: 500;
 }
 
 .home .branding {
 	margin: 10rem auto;
 	margin-bottom: 1rem;
 	text-align: center;
+	z-index: 100;
 }
 
 .home h1, .home h2, .home h3 {
@@ -148,6 +150,8 @@ section .headerBlock {
 	font-size: 72px;
 	letter-spacing: 81px;
 	margin-right: -81px;
+	z-index: 100;
+	text-shadow: 0px 2px 4px rgba(30, 30, 30, 0.5);
 }
 
 .home h2 {
@@ -167,6 +171,7 @@ section .headerBlock {
     /*position: absolute;*/
     width: 100%;
     max-width: 800px;
+    box-shadow: 0px 2px 4px rgba(30, 30, 30, 0.5);
 }
 
 .home .btn-signup,
@@ -187,17 +192,30 @@ section .headerBlock {
 	position: relative;
 	text-decoration: none !important;
 	cursor: pointer;
+	box-shadow: 0px 2px 4px rgba(30, 30, 30, 0.5);
 }
 
 .home .btn-signup i {
 	margin-right: 15px;
 }
 
+.spaceObjects {
+/*	height: 100%;
+    width: 100%;
+    max-width: 60em;
+    max-height: 60em;
+    background: transparent;*/
+    z-index: -1;
+}
+
 .rocket {
     position: absolute;
-    /*left: 0;*/
+    left: 0;
+    top: 50%;
+    max-width: 170px;
     -webkit-transform: translate3d(5em, 0, 0) rotate(55deg);
     transform: translate3d(5em, 0, 0) rotate(55deg);
+    z-index: 0;
 }
 
 .fuselage {
@@ -260,6 +278,11 @@ section .headerBlock {
     border-radius: 50%;
     -webkit-animation: planet-rotate-ani 45s linear infinite;
     animation: planet-rotate-ani 45s linear infinite;
+    z-index: 0;
+}
+
+#particles, #particles * {
+	z-index: -1;
 }
 
 /* About */
