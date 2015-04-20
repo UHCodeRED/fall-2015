@@ -127,12 +127,9 @@ section .headerBlock {
 
 .rocket {
     position: absolute;
-    /*top: 100px;*/
-    /*margin-left: -100%;*/
-/*    left: -75%;
-    bottom: -100%;*/
-    -webkit-transform: translate3d( 18em, -2em, 0) rotate(55deg);
-    transform: translate3d( 18em, -2em, 0) rotate(55deg);
+    left: 0;
+    -webkit-transform: translate3d(5em, 0, 0) rotate(55deg);
+    transform: translate3d(5em, 0, 0) rotate(55deg);
 }
 
 .fuselage {
@@ -186,11 +183,11 @@ section .headerBlock {
     max-width: 60em;
     max-height: 60em;
     position: absolute;
+    top: 125%;
     left: 0;
     right: 0;
-    bottom: -50rem;
+    bottom: 0;
     margin: auto;
-    /*background-color: #fff;*/
     -webkit-border-radius: 50%;
     border-radius: 50%;
     -webkit-animation: planet-rotate-ani 45s linear infinite;
