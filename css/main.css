@@ -112,7 +112,7 @@ section .headerBlock {
 }
 
 .home .container {
-	padding: 3rem;
+	padding: 0 3rem;
 	text-align: center;
 	position: absolute;
 	width: 100%;
@@ -287,8 +287,16 @@ section .headerBlock {
 /* Media Queries */
 
 @media screen and (max-width: 767px) {
+	body {
+		padding-top: 60px;
+	}
+
 	.home {
 		height: 100%;
+	}
+
+	.home #logo {
+		margin: 5rem 0;
 	}
 
 	.navwrapper {
