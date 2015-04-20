@@ -122,13 +122,33 @@ section .headerBlock {
     /*position: absolute;*/
     width: 100%;
     max-width: 800px;
-    margin: auto;
-    margin-top: 10rem;
+    margin: 10rem auto;
+}
+
+.home .btn-signup,
+.home .btn-signup:hover,
+.home .btn-signup:active {
+	padding: 15px 30px;
+	font-size: 24px;
+	background: #C8102E;
+	color: #fff;
+	outline: 0;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	border: 0;
+	overflow: hidden;
+	position: relative;
+	text-decoration: none !important;
+	cursor: pointer;
 }
 
 .rocket {
     position: absolute;
-    left: 0;
+    /*left: 0;*/
     -webkit-transform: translate3d(5em, 0, 0) rotate(55deg);
     transform: translate3d(5em, 0, 0) rotate(55deg);
 }
