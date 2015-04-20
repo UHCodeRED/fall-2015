@@ -21,6 +21,14 @@ body {
     user-select: none;
 }
 
+.vhelper{
+	float:none;
+    display:inline-block;
+    vertical-align:middle;
+    margin-right:-4px;
+    margin-top: 10px;
+}
+
 /* Components */
 
 section {
@@ -277,8 +285,16 @@ section .headerBlock {
 	color: #C8102E !important;
 }
 
+.sponsors .logos {
+	margin-top: 20px;
+}
+
 #partners {
 	margin-top: 60px;
+}
+
+.mlh {
+	margin-bottom: 60px;
 }
 
 /* Footer */
