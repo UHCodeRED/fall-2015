@@ -36,7 +36,7 @@ section .headerBlock {
     text-transform: uppercase;
     font-size: 42px;
     font-weight: 300;
-    padding-bottom: 60px;
+    padding-bottom: 50px;
     margin: 0;
 }
 
@@ -60,6 +60,7 @@ section .headerBlock {
     margin: 0;
     border: 0;
     border-radius: 0;
+    z-index: 999999;
 }
 
 .navbar-collapse.collapse {
@@ -276,6 +277,10 @@ section .headerBlock {
 	color: #C8102E !important;
 }
 
+#partners {
+	margin-top: 60px;
+}
+
 /* Footer */
 
 .footer {
@@ -307,7 +312,6 @@ section .headerBlock {
 		position: fixed;
 		top: 0; left: 0;
 		width: 100%;
-		z-index: 999999;
 	}
 
 	.navbar-collapse {
