@@ -57,12 +57,14 @@ section .headerBlock {
 
 .navbar-collapse.collapse {
     text-align: center;
-    /* Set this */
-    
-    display: block !important;
+	display: block !important;
     height: auto !important;
     padding-bottom: 0;
     overflow: visible !important;
+}
+
+.navbar-collapse.collapsing {
+	text-align: center;
 }
 
 .navbar-nav {
@@ -80,7 +82,12 @@ section .headerBlock {
 }
 
 .navbar-toggle {
-	margin-top: 14px;
+	margin: 10px;
+	float: left;
+}
+
+.navbar-collapse.collapse.in, .navbar-collapse.collapsing {
+	background: #C8102E;
 }
 
 /* Home */
@@ -250,6 +257,33 @@ section .headerBlock {
     background: #1e1e1e;
     color: #fff;
     font-size: 24px;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 767px) {
+	.home {
+		height: 100%;
+	}
+
+	.navbar-inverse {
+		position: absolute;
+		top: 0; left: 0;
+		width: 100%;
+		background: transparent;
+	}
+
+	.navbar-collapse {
+		width: calc(100% - 20px);
+		padding: 5px;
+		margin: 10px !important;
+		border-radius: 5px;
+		border: none;
+		box-shadow: none;
+		position: absolute;
+		top: 45px;
+		left: 0px;
+	}
 }
 
 /* Animations */
