@@ -24,7 +24,7 @@ body {
 /* Components */
 
 section {
-	padding: 50px;
+	padding: 60px 15px;
 }
 
 section:first-child {
@@ -36,7 +36,8 @@ section .headerBlock {
     text-transform: uppercase;
     font-size: 42px;
     font-weight: 300;
-    padding-bottom: 50px;
+    padding-bottom: 60px;
+    margin: 0;
 }
 
 .blockquote {
