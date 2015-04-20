@@ -73,7 +73,15 @@ particlesJS('particles', {
 });
 
 jQuery(function($) {
-    $(document).ready( function() {
+	$(document).ready( function() {
 		$('.navbar-inverse').stickUp();
-    });
-  });
+	});
+
+	$(".nav li a").click(function(e){
+		var id = $(this).attr('href');
+	    if ($(id).length === 0) return;
+	    e.preventDefault();    
+	    $('body, html').animate({scrollTop: (id == "#home") ? 0 : ($(id).offset().top - 60)});
+	    collapsemenu();
+	});
+});
