@@ -47,9 +47,16 @@ section .headerBlock {
 
 /* Navigation */
 
+.navwrapper {
+	height: 60px;
+	margin: 0;
+	padding: 0;
+}
+
 .navbar-inverse {
     background: #222;
     height: 60px;
+    width:100%;
     margin: 0;
     border: 0;
     border-radius: 0;
@@ -82,7 +89,7 @@ section .headerBlock {
 }
 
 .navbar-toggle {
-	margin: 10px;
+	margin: 14px;
 	float: left;
 }
 
@@ -181,7 +188,7 @@ section .headerBlock {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -60%;
+    bottom: -50rem;
     margin: auto;
     /*background-color: #fff;*/
     -webkit-border-radius: 50%;
@@ -266,23 +273,19 @@ section .headerBlock {
 		height: 100%;
 	}
 
+	.navwrapper {
+		height: 0;
+	}
+
 	.navbar-inverse {
-		position: absolute;
+		position: fixed;
 		top: 0; left: 0;
 		width: 100%;
-		background: transparent;
+		z-index: 999999;
 	}
 
 	.navbar-collapse {
-		width: calc(100% - 20px);
-		padding: 5px;
-		margin: 10px !important;
-		border-radius: 5px;
-		border: none;
-		box-shadow: none;
-		position: absolute;
-		top: 45px;
-		left: 0px;
+		padding: 20px !important;
 	}
 }
 

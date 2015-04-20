@@ -26,7 +26,7 @@ particlesJS('particles', {
         },
         size: 2.5,
         size_random: true,
-        nb: 65,
+        nb: $(window).width() / 30,
         line_linked: {
             enable_auto: true,
             distance: 50,
@@ -71,3 +71,9 @@ particlesJS('particles', {
     /* Retina Display Support */
     retina_detect: true
 });
+
+jQuery(function($) {
+    $(document).ready( function() {
+		$('.navbar-inverse').stickUp();
+    });
+  });
