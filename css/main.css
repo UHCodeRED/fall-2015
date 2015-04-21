@@ -29,11 +29,11 @@ body {
 }
 
 .red {
-	color: #C8102E;
+	color: #C8102E !important;
 }
 
 .redbg {
-	background: #C8102E;
+	background: #C8102E !important;
 }
 
 /* Components */
@@ -154,8 +154,16 @@ section .headerBlock {
 }
 
 .home h2 {
-	font-weight: 400;
+	font-weight: 700;
 	font-size: 36px;
+}
+
+.home h2 .university {
+    font-weight: 400;
+}
+
+.home h2 .of {
+    font-weight: 300;
 }
 
 .home h3 {
