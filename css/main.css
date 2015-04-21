@@ -389,8 +389,15 @@ section .headerBlock {
 	}
 
 	.home .branding {
-		margin: 5rem 0;
+        margin-top: 3rem;
 	}
+
+    .home .btn-signup,
+    .home .btn-signup:hover,
+    .home .btn-signup:active {
+        padding: 10px 20px;
+        font-size: 18px;
+    }
 
 	.navwrapper {
 		height: 0;
