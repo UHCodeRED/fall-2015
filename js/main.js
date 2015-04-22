@@ -88,5 +88,7 @@ jQuery(function($) {
 	    collapsemenu();
 	});
 
-    $(".fitwidth").textStretch();
+    $(window).load(function() {
+        $(".fitwidth").textStretch();
+    });
 });
