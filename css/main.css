@@ -225,6 +225,10 @@ section .headerBlock {
     z-index: 100;
 }
 
+.home .headlines {
+    margin: 0 5%;
+}
+
 .home h1,
 .home h2,
 .home h3 {
@@ -233,6 +237,7 @@ section .headerBlock {
     font-size: 72px;
     z-index: 100;
     text-shadow: 0px 2px 4px rgba(30, 30, 30, 0.5);
+    margin: 10px 0;
 }
 
 .home h2 {
@@ -250,7 +255,7 @@ section .headerBlock {
 
 .home h3 {
     font-size: 28px;
-    width: 65%;
+    width: 50%;
     margin: auto;
 }
 
