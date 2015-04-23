@@ -260,10 +260,7 @@ section .headerBlock {
 }
 
 .home #logo {
-    /*position: absolute;*/
-    
     width: 100%;
-    box-shadow: 0px 2px 4px rgba(30, 30, 30, 0.5);
 }
 
 .home .btn-signup,
@@ -397,7 +394,21 @@ section .headerBlock {
 }
 
 .about p {
-    font-size: 18px;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 36px;
+}
+
+.about h1 {
+    padding: 30px 0;
+}
+
+.aboutnode {
+    padding: 20px;
+}
+
+.aboutnode i, h2 {
+    color: #333;
 }
 
 /* Mission */
