@@ -300,13 +300,13 @@ section .headerBlock {
 }
 
 .spaceObjects {
-    /*  height: 100%;
-    width: 100%;
+    height: 100%;
+    /*width: 100%;*/
     max-width: 60em;
     max-height: 60em;
-    background: transparent;*/
-    
+    background: transparent;
     z-index: -1;
+    margin: 0 auto;
 }
 
 .rocket {
@@ -369,12 +369,11 @@ section .headerBlock {
     width: 100%;
     max-width: 60em;
     max-height: 60em;
-    position: absolute;
-    top: 125%;
+    position: relative;
+    bottom: -75%;
     left: 0;
     right: 0;
-    bottom: 0;
-    margin: auto;
+    margin: 0 auto;
     -webkit-border-radius: 50%;
     border-radius: 50%;
     -webkit-animation: planet-rotate-ani 45s linear infinite;
@@ -382,9 +381,9 @@ section .headerBlock {
     z-index: 0;
 }
 
-#particles,
-#particles * {
+.pg-canvas {
     z-index: -1;
+    position: absolute;
 }
 
 /* About */
