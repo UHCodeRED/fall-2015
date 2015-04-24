@@ -27,5 +27,6 @@ jQuery(function($) {
 
     $(window).load(function() {
         textStretch(document.getElementsByClassName("fitwidth"));
+        $("body").css("opacity", "1");
     });
 });
