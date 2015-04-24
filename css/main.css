@@ -309,7 +309,7 @@ section .headerBlock {
 .rocket {
     position: absolute;
     left: 0;
-    top: 50%;
+    bottom: 25%;
     max-width: 170px;
     -webkit-transform: translate3d(5em, 0, 0) rotate(55deg);
     transform: translate3d(5em, 0, 0) rotate(55deg);
@@ -397,10 +397,17 @@ section .headerBlock {
     font-size: 24px;
     font-weight: 300;
     line-height: 36px;
+    padding: 0;
+    margin: 0;
 }
 
 .about h1 {
     padding: 30px 0;
+}
+
+.about .catch {
+    text-transform: uppercase;
+    padding: 60px 0;
 }
 
 .aboutnode {
@@ -458,12 +465,12 @@ section .headerBlock {
     margin-top: 20px;
 }
 
-#partners {
-    margin-top: 60px;
+.sponsornode {
+    margin-bottom: 20px;
 }
 
-.mlh {
-    margin-bottom: 60px;
+#partners {
+    margin-top: 60px;
 }
 
 /* Footer */
@@ -477,47 +484,54 @@ section .headerBlock {
 /* Media Queries */
 
 @media screen and (max-width: 767px) {
-    body {
-        padding-top: 60px;
-    }
-    .home {
-        height: 100%;
-    }
-    .home .branding {
-        margin-top: 3rem;
-    }
-    .home .btn-signup,
-    .home .btn-signup:hover,
-    .home .btn-signup:active {
-        padding: 10px 20px;
-        font-size: 18px;
-    }
     .navwrapper {
         height: 0;
     }
     .navbar-inverse {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
+        display: none;
     }
-    .navbar-collapse {
-        padding: 20px !important;
+}
+
+@media screen and (max-width: 767px) and (max-height: 767px) {
+    .home {
+        height: 100%;
+    }
+    .home .branding {
+        margin-top: 60px;
+    }
+    .home .btn-signup,
+    .home .btn-signup:hover,
+    .home .btn-signup:active {
+        padding: 15px 20px;
+        font-size: 20px;
+    }
+    .rocket {
+        -webkit-transform: scale(0.75) translate3d(5em, 0, 0) rotate(55deg);
+        transform: scale(0.75) translate3d(5em, 0, 0) rotate(55deg);
+    }
+    .planet {
+        bottom: -60%;
+    }
+}
+
+@media screen and (max-width: 320px) and (max-height: 767px) {
+    .rocket {
+        -webkit-transform: scale(0.5) translate3d(5em, 0, 0) rotate(55deg);
+        transform: scale(0.5) translate3d(5em, 0, 0) rotate(55deg);
+    }
+    .planet {
+        bottom: -60%;
+    }
+}
+
+@media screen and (max-height: 640px) and (min-width: 768px) {
+    .home .branding {
+        transform: scale(0.5);
+        margin: 0 auto;
     }
 }
 
 /* Animations */
-
-@-webkit-keyframes rocket-ani {
-    0%, 100% {
-        -webkit-transform: scale(1, 1);
-        transform: scale(1, 1);
-    }
-    50% {
-        -webkit-transform: scale(1, 1.025);
-        transform: scale(1, 1.05);
-    }
-}
 
 @keyframes rocket-ani {
     0%, 100% {
@@ -525,19 +539,6 @@ section .headerBlock {
     }
     50% {
         transform: scale(1, 1.025);
-    }
-}
-
-@-webkit-keyframes flame-ani-lg {
-    0%, 25%, 60%, 100% {
-        border-width: 6em 2em 0 2em;
-    }
-    10%,
-    90% {
-        border-width: 5em 2em 0 2em;
-    }
-    40% {
-        border-width: 6em 2em 0 2em;
     }
 }
 
@@ -554,19 +555,6 @@ section .headerBlock {
     }
 }
 
-@-webkit-keyframes flame-ani {
-    0%, 25%, 60%, 100% {
-        border-width: 3em 1em 0 1em;
-    }
-    10%,
-    90% {
-        border-width: 2.5em 1em 0 1em;
-    }
-    40% {
-        border-width: 3em 1em 0 1em;
-    }
-}
-
 @keyframes flame-ani {
     0%, 25%, 60%, 100% {
         border-width: 3em 1em 0 1em;
@@ -577,17 +565,6 @@ section .headerBlock {
     }
     40% {
         border-width: 3em 1em 0 1em;
-    }
-}
-
-@-webkit-keyframes planet-rotate-ani {
-    0% {
-        -webkit-transform: rotate( 0deg);
-        transform: rotate( 0deg);
-    }
-    100% {
-        -webkit-transform: rotate( -360deg);
-        transform: rotate( -360deg);
     }
 }
 
