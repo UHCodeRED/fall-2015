@@ -27,6 +27,17 @@ jQuery(function($) {
 
     $(window).load(function() {
         textStretch(document.getElementsByClassName("fitwidth"));
+        duplicate();
         $("body").css("opacity", "1");
     });
+
+    function duplicate() {
+        $("[clone]").each(function(){
+            var original = $("#" + $(this).attr("clone")).clone();
+            var classes = $(this).attr('class').split(/s+/);
+            //Copy any additional classes set in placeholder to clone
+            for (i = 0; i < classes.length; i++) original.addClass(classes[i]);
+            $(this).replaceWith(original);
+        });
+    }
 });
