@@ -25,19 +25,37 @@ jQuery(function($) {
         collapsemenu();
     });
 
+    $(window).resize(function(){
+        // duplicate();
+        equalizeHeight();
+    });
+
     $(window).load(function() {
         textStretch(document.getElementsByClassName("fitwidth"));
-        duplicate();
+        $(window).resize();
         $("body").css("opacity", "1");
     });
 
-    function duplicate() {
-        $("[clone]").each(function(){
-            var original = $("#" + $(this).attr("clone")).clone();
-            var classes = $(this).attr('class').split(/s+/);
-            //Copy any additional classes set in placeholder to clone
-            for (i = 0; i < classes.length; i++) original.addClass(classes[i]);
-            $(this).replaceWith(original);
+    // function duplicate() {
+    //     $("[clone]").each(function(){
+    //         var original = $("#" + $(this).attr("clone")).clone();
+    //         var classes = $(this).attr('class').split(/s+/);
+    //         //Copy any additional classes set in placeholder to clone
+    //         for (i = 0; i < classes.length; i++) original.addClass(classes[i]);
+    //         $(this).replaceWith(original);
+    //     });
+    // }
+
+    function equalizeHeight(){
+        $("[children-same-height]").each(function(){
+            var parentRow = $(this),
+                childrenCols = $(this).children();
+            childrenCols.css("min-height", '');
+            var childHeights = childrenCols.map(function(){
+                return $(this).outerHeight();
+            });
+            var tallestChild = Math.max.apply(Math, childHeights);
+            childrenCols.css('min-height', tallestChild);
         });
     }
 });
