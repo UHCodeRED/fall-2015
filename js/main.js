@@ -31,7 +31,7 @@ jQuery(function($) {
     });
 
     $(window).load(function() {
-        textStretch(document.getElementsByClassName("fitwidth"));
+        $(".fitwidth").textStretch();
         $(window).resize();
         $("body").css("opacity", "1");
     });
