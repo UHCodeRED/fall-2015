@@ -43,3 +43,19 @@ function(){for(var a=0,b=["ms","moz","webkit","o"],c=0;c<b.length&&!window.reque
 
 /*! textStretch.js v1.0.0 | (c) 2012 - 2013 Albin Larsson | Licensed under MIT: http://www.opensource.org/licenses/mit-license.php */
 !function(a){"use strict";function b(a,b,d){for(c=0;c<b.length;c+=1)void 0!==a.addEventListener?a.addEventListener(b[c],d,!1):void 0!==a.attachEvent?a.attachEvent("on"+b[c],d):a["on"+b[c]]=d}var c,d,e,f=!1,g={},h={elements:[],settings:[]};h.elements.indexOf||(h.elements.indexOf=function(a){for(i=0;i<h.elements.length;i++)if(this[i]===a)return i;return-1}),function(a){var b=document.createElement("style");b.type="text/css",b.styleSheet?b.styleSheet.cssText=a:b.appendChild(document.createTextNode(a)),document.getElementsByTagName("head")[0].appendChild(b)}(".textStretch-calc{display:inline-block !important;*display:inline !important;white-space:nowrap !important;width:auto !important;padding:0 !important;text-align:left !important}"),window.textStretch=function(i,j){function k(a,b){var c,d;return a.currentStyle&&!a.currentStyle.hasLayout&&(a.style.zoom="1"),c=a.clientWidth,a.style.fontSize="100px",a.className+=" textStretch-calc",d=parseInt(c/(a.clientWidth/100),10),d=Math.min(Math.max(d,b.minFontSize),b.maxFontSize),a.style.fontSize=d+"px",a.clientWidth>c&&(a.style.fontSize=d-1+"px"),a.className=a.className.substr(0,a.className.length-17),c===a.clientWidth}function l(a,b,d){for(c=0,e=!1;c<a.length&&!e;c+=1)e=!k(a[c],b[c]||b);e&&!d&&l(a,b,!0)}for(function(b){for(c=0;c<b.length;c+=1)if(g[b[c]]=j&&j[b[c]]?j[b[c]]:a[b[c]],"number"!=typeof g[b[c]])throw'textStretch error. Argument "'+b[c]+'" must be a number. Argument given was "'+g[b[c]]+'".'}(["minFontSize","maxFontSize"]),g.maxFontSize=g.maxFontSize||Number.POSITIVE_INFINITY,i=i.nodeName?[i]:i,l(i,g),c=0;c<i.length;c+=1)d=h.elements.indexOf(i[c]),-1===d?(h.elements.push(i[c]),h.settings.push(g)):h.settings[d]=g;f||(b(window,["orientationchange","resize"],function(){l(h.elements,h.settings)}),f=!0)},a.minFontSize=0,a.maxFontSize=0}(window.textStretchDefaults={});
+
+(function($, self){
+
+if(!$ || !self) {
+	return;
+}
+
+for(var i=0; i<self.properties.length; i++) {
+	var property = self.properties[i],
+		camelCased = StyleFix.camelCase(property),
+		PrefixCamelCased = self.prefixProperty(property, true);
+	
+	$.cssProps[camelCased] = PrefixCamelCased;
+}
+
+})(window.jQuery, window.PrefixFree);
