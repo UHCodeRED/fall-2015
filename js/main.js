@@ -5,13 +5,13 @@ jQuery(function($) {
             directionX: 'left',
             directionY: 'down',
             proximity: 100,
-            dotColor: "#aaa",
+            dotColor: "#eee",
             lineColor: "#999",
             particleRadius: 4,
-            density: 25000,
+            density: 20000,
             parallaxMultiplier: 20,
-            maxSpeedX: 1,
-            maxSpeedY: 1
+            maxSpeedX: 0,
+            maxSpeedY: 0
         });
     });
 
