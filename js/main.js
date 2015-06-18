@@ -58,4 +58,17 @@ jQuery(function($) {
             childrenCols.css('min-height', tallestChild);
         });
     }
+
+    function toggleModal(){
+        if ($(".applyModal").hasClass("fadeIn")) $(".applyModal").removeClass("fadeIn");
+        else $(".applyModal").addClass("fadeIn");
+    }
+
+    $("#apply").click(function(){
+        toggleModal();
+    });
+
+    $("#close").click(function(){
+        toggleModal();
+    });
 });
