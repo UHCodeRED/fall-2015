@@ -487,7 +487,7 @@ section .headerBlock {
     right: 0;
     position: fixed;
     z-index: 100000000000000;
-    visibility: hidden;
+    display:none;
 }
 
 .titlebar {
@@ -718,7 +718,7 @@ section .headerBlock {
     -webkit-animation-duration: 0.1s;
     animation-timing-function: ease-in-out;
     -webkit-animation-timing-function: ease-in-out;
-    visibility: visible !important;
+    display: block; !important;
 }
 
 @keyframes fadeIn {

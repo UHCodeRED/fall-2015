@@ -30,7 +30,7 @@ jQuery(function($) {
         equalizeHeight();
     });
 
-    $(window).load(function() {
+    $(window).load(function() { 
         $(".fitwidth").textStretch();
         $(window).resize();
         $("body").css("opacity", "1");
