@@ -580,6 +580,15 @@ section .headerBlock {
     }
 }
 
+@media screen and (max-height: 480px) {
+    .rocket {
+        bottom: 10%;
+        -webkit-transform: scale(0.5) translate3d(3em, 0, 0) rotate(55deg);
+        transform: scale(0.5) translate3d(3em, 0, 0) rotate(55deg);
+    }
+}
+}
+
 @media screen and (min-width: 1200px) and (max-width: 1400px) and (min-height: 720px) and (max-height: 800px) {
     .home .branding {
         margin: 3rem auto;
