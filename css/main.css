@@ -155,7 +155,7 @@ section .headerBlock {
     margin: 0;
     border: 0;
     border-radius: 0;
-    z-index: 999999;
+    z-index: 7777;
 }
 
 .navbar-collapse.collapse {
@@ -307,11 +307,11 @@ section .headerBlock {
 
 .rocket {
     position: absolute;
-    left: 0;
-    bottom: 25%;
+    right: -1em;
+    top: -15%;
     max-width: 170px;
-    -webkit-transform: translate3d(5em, 0, 0) rotate(55deg);
-    transform: translate3d(5em, 0, 0) rotate(55deg);
+    -webkit-transform: translate3d(4em, 0, 0) rotate(48deg);
+    transform: translate3d(4em, 0, 0) rotate(48deg);
     z-index: 0;
 }
 
@@ -359,22 +359,30 @@ section .headerBlock {
     animation: flame-ani 1.5s ease-in-out infinite;
 }
 
-.planet {
+.planet_wrapper {
     display: block;
-    height: 100%;
-    width: 100%;
-    max-width: 60em;
-    max-height: 60em;
     position: relative;
     bottom: -75%;
     left: 0;
     right: 0;
     margin: 0 auto;
+    z-index: 0;
+}
+
+.planet {
+    position: relative;
     -webkit-border-radius: 50%;
     border-radius: 50%;
     -webkit-animation: planet-rotate-ani 45s linear infinite;
     animation: planet-rotate-ani 45s linear infinite;
-    z-index: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    max-width: 60em;
+    max-height: 60em;
 }
 
 .pg-canvas {
@@ -534,21 +542,20 @@ section .headerBlock {
         font-size: 20px;
     }
     .rocket {
-        bottom: 20%;
-        -webkit-transform: scale(0.75) translate3d(5em, 0, 0) rotate(55deg);
-        transform: scale(0.75) translate3d(5em, 0, 0) rotate(55deg);
+        -webkit-transform: scale(0.75) translate3d(4em, 0, 0) rotate(48deg);
+        transform: scale(0.75) translate3d(4em, 0, 0) rotate(48deg);
     }
-    .planet {
+    .planet_wrapper {
         bottom: -60%;
     }
 }
 
 @media screen and (max-width: 320px) and (max-height: 767px) {
     .rocket {
-        -webkit-transform: scale(0.5) translate3d(5em, 0, 0) rotate(55deg);
-        transform: scale(0.5) translate3d(5em, 0, 0) rotate(55deg);
+        -webkit-transform: scale(0.5) translate3d(4em, 0, 0) rotate(48deg);
+        transform: scale(0.5) translate3d(4em, 0, 0) rotate(48deg);
     }
-    .planet {
+    .planet_wrapper {
         bottom: -60%;
     }
 }
@@ -559,9 +566,8 @@ section .headerBlock {
         margin: 0 auto;
     }
     .rocket {
-        bottom: 15%;
-        -webkit-transform: scale(0.75) translate3d(5em, 0, 0) rotate(55deg);
-        transform: scale(0.75) translate3d(5em, 0, 0) rotate(55deg);
+        -webkit-transform: scale(0.75) translate3d(4em, 0, 0) rotate(48deg);
+        transform: scale(0.75) translate3d(4em, 0, 0) rotate(48deg);
     }
 }
 
@@ -571,22 +577,26 @@ section .headerBlock {
         margin: 0 auto;
     }
     .rocket {
-        bottom: 10%;
-        -webkit-transform: scale(0.5) translate3d(3em, 0, 0) rotate(55deg);
-        transform: scale(0.5) translate3d(3em, 0, 0) rotate(55deg);
+        -webkit-transform: scale(0.5) translate3d(3em, 0, 0) rotate(48deg);
+        transform: scale(0.5) translate3d(3em, 0, 0) rotate(48deg);
     }
-    .planet {
+    .planet_wrapper {
         bottom: -75%;
     }
 }
 
 @media screen and (max-height: 480px) {
     .rocket {
-        bottom: 10%;
-        -webkit-transform: scale(0.5) translate3d(3em, 0, 0) rotate(55deg);
-        transform: scale(0.5) translate3d(3em, 0, 0) rotate(55deg);
+        -webkit-transform: scale(0.5) translate3d(3em, 0, 0) rotate(48deg);
+        transform: scale(0.5) translate3d(3em, 0, 0) rotate(48deg);
     }
 }
+
+@media screen and (max-height: 800px) {
+    .rocket {
+        -webkit-transform: scale(0.8) translate3d(3em, 0, 0) rotate(48deg);
+        transform: scale(0.8) translate3d(3em, 0, 0) rotate(48deg);
+    }
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) and (min-height: 720px) and (max-height: 800px) {
@@ -596,7 +606,7 @@ section .headerBlock {
 }
 
 @media screen and (min-width: 420px) and (max-width: 500px) and (min-height: 800px) and (max-height: 880px) {
-    .planet {
+    .planet_wrapper {
         bottom: -60%;
     }
 }
@@ -605,20 +615,28 @@ section .headerBlock {
     .home .branding {
         margin: 5rem auto;
     }
-    .planet {
-        bottom: -90%;
-    }
 }
 
-@media screen and (min-height: 1080px) {
-    .planet {
+@media screen and (min-height: 1200px) {
+    .planet_wrapper {
         bottom: -100%;
     }
 }
 
-@media screen and (min-height: 1200px) {
+@media screen and (max-width: 800px) {
     .planet {
-        bottom: -110%;
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .rocket {
+        -webkit-transform: scale(0.5) translate3d(3em, 0, 0) rotate(48deg);
+        transform: scale(0.5) translate3d(3em, 0, 0) rotate(48deg);
+    }
+
+    #mlh-trust-badge {
+        display: none !important;
+        z-index: 7778;
     }
 }
 
