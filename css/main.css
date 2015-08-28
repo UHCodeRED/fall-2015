@@ -387,7 +387,7 @@ section .headerBlock {
 
 .pg-canvas {
     z-index: -1;
-    position: absolute;
+    position: fixed;
 }
 
 /* About */
@@ -439,7 +439,9 @@ section .headerBlock {
 
 /* FAQ */
 
-.faq {}
+.faq {
+    background: rgba(50, 50, 50, 0.75);
+}
 
 .faq .headerBlock {
     color: #fff !important;
@@ -483,7 +485,7 @@ section .headerBlock {
 /* Footer */
 
 .footer {
-    background: #1e1e1e;
+    background: rgba(0,0,0,0.5);
     color: #fff;
     font-size: 24px;
 }
