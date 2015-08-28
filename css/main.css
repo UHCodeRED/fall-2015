@@ -440,7 +440,7 @@ section .headerBlock {
 /* FAQ */
 
 .faq {
-    background: rgba(50, 50, 50, 0.75);
+    background: rgba(20, 20, 20, 0.75)
 }
 
 .faq .headerBlock {
