@@ -475,11 +475,15 @@ section .headerBlock {
 }
 
 .sponsornode {
-    margin-bottom: 20px;
+    margin-bottom: 48px;
+}
+
+.partnernodes .sponsornode {
+    margin-bottom: 16px;
 }
 
 #partners {
-    margin-top: 60px;
+    margin-top: 32px;
 }
 
 /* Footer */
