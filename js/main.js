@@ -26,7 +26,6 @@ jQuery(function($) {
     });
 
     $(window).resize(function(){
-        // duplicate();
         equalizeHeight();
     });
 
@@ -35,16 +34,6 @@ jQuery(function($) {
         $(window).resize();
         $("body").css("opacity", "1");
     });
-
-    // function duplicate() {
-    //     $("[clone]").each(function(){
-    //         var original = $("#" + $(this).attr("clone")).clone();
-    //         var classes = $(this).attr('class').split(/s+/);
-    //         //Copy any additional classes set in placeholder to clone
-    //         for (i = 0; i < classes.length; i++) original.addClass(classes[i]);
-    //         $(this).replaceWith(original);
-    //     });
-    // }
 
     function equalizeHeight(){
         $("[children-same-height]").each(function(){
@@ -60,8 +49,9 @@ jQuery(function($) {
     }
 
     function toggleModal(){
-        if ($(".applyModal").hasClass("fadeIn")) $(".applyModal").removeClass("fadeIn");
-        else $(".applyModal").addClass("fadeIn");
+        return ($(".applyModal").hasClass("fadeIn")) ? 
+            $(".applyModal").removeClass("fadeIn") : 
+            $(".applyModal").addClass("fadeIn");
     }
 
     $("#apply").click(function(){
