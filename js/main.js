@@ -18,7 +18,7 @@ jQuery(function($) {
     $(".nav li a").click(function(e) {
         var id = $(this).attr('href');
         if ($(id).length === 0) return;
-        e.preventDefault();
+        e.preventDefault();p
         $('body, html').animate({
             scrollTop: (id == "#home") ? 0 : ($(id).offset().top - 60)
         });
@@ -27,6 +27,7 @@ jQuery(function($) {
 
     $(window).resize(function(){
         equalizeHeight();
+        $("#planet").height($("#planet").width());
     });
 
     $(window).load(function() { 
