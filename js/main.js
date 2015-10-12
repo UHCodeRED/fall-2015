@@ -27,6 +27,7 @@ jQuery(function($) {
 
     $(window).resize(function(){
         equalizeHeight();
+        $(".planet").height($(".planet").width());
     });
 
     $(window).load(function() { 
