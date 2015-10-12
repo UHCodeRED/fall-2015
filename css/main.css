@@ -383,6 +383,7 @@ section .headerBlock {
     width: 100%;
     max-width: 60em;
     max-height: 60em;
+    z-index: -1;
 }
 
 .pg-canvas {
