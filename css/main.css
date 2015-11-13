@@ -308,7 +308,6 @@ section .headerBlock {
 
 .rocket {
     position: absolute;
-    right: 35%;
     top: -15%;
     max-width: 170px;
     -webkit-transform: translate3d(4em, 0, 0) rotate(48deg);
