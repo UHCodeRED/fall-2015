@@ -308,7 +308,7 @@ section .headerBlock {
 
 .rocket {
     position: absolute;
-    right: -1em;
+    right: 35%;
     top: -15%;
     max-width: 170px;
     -webkit-transform: translate3d(4em, 0, 0) rotate(48deg);
@@ -617,6 +617,7 @@ section .headerBlock {
     .rocket {
         -webkit-transform: scale(0.5) translate3d(3em, 0, 0) rotate(48deg);
         transform: scale(0.5) translate3d(3em, 0, 0) rotate(48deg);
+        right: 0;
     }
 
     #mlh-trust-badge {
