@@ -363,11 +363,9 @@ section .headerBlock {
 .planet_wrapper {
     display: block;
     position: absolute;
-    bottom: -75%;
-    left: 0;
-    right: 0;
     margin: 0 auto;
     z-index: -1;
+    width: 100%;
 }
 
 .planet {
@@ -553,18 +551,12 @@ section .headerBlock {
         -webkit-transform: scale(0.75) translate3d(4em, 0, 0) rotate(48deg);
         transform: scale(0.75) translate3d(4em, 0, 0) rotate(48deg);
     }
-    .planet_wrapper {
-        bottom: -60%;
-    }
 }
 
 @media screen and (max-width: 320px) and (max-height: 767px) {
     .rocket {
         -webkit-transform: scale(0.5) translate3d(4em, 0, 0) rotate(48deg);
         transform: scale(0.5) translate3d(4em, 0, 0) rotate(48deg);
-    }
-    .planet_wrapper {
-        bottom: -60%;
     }
 }
 
@@ -588,9 +580,6 @@ section .headerBlock {
         -webkit-transform: scale(0.5) translate3d(3em, 0, 0) rotate(48deg);
         transform: scale(0.5) translate3d(3em, 0, 0) rotate(48deg);
     }
-    .planet_wrapper {
-        bottom: -75%;
-    }
 }
 
 @media screen and (max-height: 480px) {
@@ -613,21 +602,9 @@ section .headerBlock {
     }
 }
 
-@media screen and (min-width: 420px) and (max-width: 500px) and (min-height: 800px) and (max-height: 880px) {
-    .planet_wrapper {
-        bottom: -60%;
-    }
-}
-
 @media screen and (min-height: 1024px) {
     .home .branding {
         margin: 5rem auto;
-    }
-}
-
-@media screen and (min-height: 1200px) {
-    .planet_wrapper {
-        bottom: -100%;
     }
 }
 
