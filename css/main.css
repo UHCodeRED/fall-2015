@@ -607,7 +607,7 @@ section .headerBlock {
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 960px) {
     .planet {
         width: 90%;
         margin-left: 5%;
