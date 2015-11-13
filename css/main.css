@@ -296,6 +296,11 @@ section .headerBlock {
     margin-right: 15px;
 }
 
+.powered {
+    color: white;
+    font-size: 72px;
+}
+
 .spaceObjects {
     height: 100%;
     /*width: 100%;*/
@@ -622,6 +627,10 @@ section .headerBlock {
     #mlh-trust-badge {
         display: none !important;
         z-index: 7778;
+    }
+    
+    .powered {
+        font-size: 48px;
     }
 }
 
