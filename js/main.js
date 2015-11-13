@@ -30,8 +30,8 @@ jQuery(function($) {
         $("#planet").height($("#planet").width());
         var pwb = -(($(".planet_wrapper").height()/2)+60);
         $(".planet_wrapper").css("bottom", pwb);
-        $(".rocket").css("top", pwb)
-        $(".rocket").css("right", -(pwb/2))
+        $(".rocket").css("top", pwb/2)
+        $(".rocket").css("right", -(pwb))
     });
 
     $(window).load(function() { 
