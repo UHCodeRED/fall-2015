@@ -28,7 +28,10 @@ jQuery(function($) {
     $(window).resize(function(){
         equalizeHeight();
         $("#planet").height($("#planet").width());
-        $(".planet_wrapper").css("bottom", -(($(".planet_wrapper").height()/2)+60))
+        var pwb = -(($(".planet_wrapper").height()/2)+60);
+        $(".planet_wrapper").css("bottom", pwb);
+        $(".rocket").css("top", pwb)
+        $(".rocket").css("right", -(pwb/2))
     });
 
     $(window).load(function() { 
