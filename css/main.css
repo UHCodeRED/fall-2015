@@ -298,7 +298,7 @@ section .headerBlock {
 
 .powered {
     color: white;
-    font-size: 72px;
+    font-size: 72px !important;
 }
 
 .spaceObjects {
@@ -630,7 +630,7 @@ section .headerBlock {
     }
     
     .powered {
-        font-size: 48px;
+        font-size: 48px !important;
     }
 }
 
