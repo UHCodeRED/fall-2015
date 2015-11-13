@@ -31,7 +31,7 @@ jQuery(function($) {
         var height = "innerHeight" in window 
                ? window.innerHeight
                : document.documentElement.offsetHeight; 
-        // $(".planet_wrapper").css("bottom", -((height/2) + ($(".planet_wrapper").height()/2)))
+        $(".planet_wrapper").css("bottom", -((height/2)+60))
     });
 
     $(window).load(function() { 
