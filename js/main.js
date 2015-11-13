@@ -29,9 +29,11 @@ jQuery(function($) {
         equalizeHeight();
         $("#planet").height($("#planet").width());
         var pwb = -(($(".planet_wrapper").height()/2)+60);
+        var height = "innerHeight" in window 
+               ? window.innerHeight
+               : document.documentElement.offsetHeight; 
+        if (height < 900) pwb -= 100;
         $(".planet_wrapper").css("bottom", pwb);
-        // $(".rocket").css("top", pwb/2)
-        // $(".rocket").css("right", -(pwb))
     });
 
     $(window).load(function() { 
