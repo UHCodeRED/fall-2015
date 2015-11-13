@@ -362,7 +362,7 @@ section .headerBlock {
 
 .planet_wrapper {
     display: block;
-    position: relative;
+    position: absolute;
     bottom: -75%;
     left: 0;
     right: 0;
