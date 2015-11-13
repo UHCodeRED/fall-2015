@@ -625,7 +625,7 @@ section .headerBlock {
     }
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (min-width: 960px) {
     .rocket {
         left: 700px;
         right: inherit;
