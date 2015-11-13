@@ -301,6 +301,11 @@ section .headerBlock {
     font-size: 72px !important;
 }
 
+.powered img {
+    height: 72px;
+    margin-top: -12px;
+}
+
 .spaceObjects {
     height: 100%;
     /*width: 100%;*/
@@ -631,6 +636,11 @@ section .headerBlock {
     
     .powered {
         font-size: 48px !important;
+    }
+    
+    .powered img {
+        height: 48px;
+        margin-top: 0;
     }
 }
 
