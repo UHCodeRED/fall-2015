@@ -18,7 +18,7 @@ jQuery(function($) {
     $(".nav li a").click(function(e) {
         var id = $(this).attr('href');
         if ($(id).length === 0) return;
-        e.preventDefault();p
+        e.preventDefault();
         $('body, html').animate({
             scrollTop: (id == "#home") ? 0 : ($(id).offset().top - 60)
         });
