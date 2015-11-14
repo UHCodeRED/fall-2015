@@ -642,6 +642,11 @@ section .headerBlock {
         height: 48px;
         margin-top: 0;
     }
+    
+    .home .branding {
+        transform: scale(0.75);
+        margin: 0 !important;
+    }
 }
 
 @media screen and (min-width: 960px) {
