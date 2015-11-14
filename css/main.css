@@ -644,7 +644,8 @@ section .headerBlock {
     }
     
     .home .branding {
-        transform: scale(0.75);
+        transform: scale(0.75) !important;
+        -moz-transform: scale(0.75) !important;
         margin: 0 !important;
     }
 }
